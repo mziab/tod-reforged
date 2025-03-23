@@ -9,6 +9,18 @@ Although a sizable chunk of the script has been checked against the original Jap
 
 One inspiration behind this was a defunct project in the same vein by Cless of Phantasian Productions fame.
 
+![main menu before](https://mziab.grajpopolsku.pl/files/tod-reforged/main1.png) ![main menu after](https://mziab.grajpopolsku.pl/files/tod-reforged/main2.png)
+
+![status screen before](https://mziab.grajpopolsku.pl/files/tod-reforged/status1.png) ![status screen after](https://mziab.grajpopolsku.pl/files/tod-reforged/status2.png)
+
+![artes before](https://mziab.grajpopolsku.pl/files/tod-reforged/sartes1.png) ![artes after](https://mziab.grajpopolsku.pl/files/tod-reforged/sartes2.png)
+
+![sprites before](https://mziab.grajpopolsku.pl/files/tod-reforged/bunny1.png) ![sprites after](https://mziab.grajpopolsku.pl/files/tod-reforged/bunny2.png)
+
+![sprites before](https://mziab.grajpopolsku.pl/files/tod-reforged/cat1.png) ![sprites after](https://mziab.grajpopolsku.pl/files/tod-reforged/cat2.png)
+
+For more screenshots click [here](https://mziab.grajpopolsku.pl/files/tod-reforged/)
+
 DISCLAIMER
 ----------
 No ownership is claimed by mziab or FlamePurge over Tales of Destiny or the franchise from which it originates. Commercial use of this patch, including but not limited to reproduction, sale, etc. is strictly prohibited.
