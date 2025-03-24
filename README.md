@@ -9,21 +9,21 @@ Although a sizable chunk of the script has been checked against the original Jap
 
 One inspiration behind this was a defunct project in the same vein by Cless of Phantasian Productions fame.
 
-![main menu before](https://mziab.grajpopolsku.pl/files/tod-reforged/main1.png) ![main menu after](https://mziab.grajpopolsku.pl/files/tod-reforged/main2.png)
+![main menu before](https://mziab.github.io/tod-reforged/img/main1.png) ![main menu after](https://mziab.github.io/tod-reforged/img/main2.png)
 
-![status screen before](https://mziab.grajpopolsku.pl/files/tod-reforged/status1.png) ![status screen after](https://mziab.grajpopolsku.pl/files/tod-reforged/status2.png)
+![status screen before](https://mziab.github.io/tod-reforged/img/status1.png) ![status screen after](https://mziab.github.io/tod-reforged/img/status2.png)
 
-![artes before](https://mziab.grajpopolsku.pl/files/tod-reforged/sartes1.png) ![artes after](https://mziab.grajpopolsku.pl/files/tod-reforged/sartes2.png)
+![artes before](https://mziab.github.io/tod-reforged/img/sartes1.png) ![artes after](https://mziab.github.io/tod-reforged/img/sartes2.png)
 
-![equipment before](https://mziab.grajpopolsku.pl/files/tod-reforged/equip1.png) ![equipment after](https://mziab.grajpopolsku.pl/files/tod-reforged/equip2.png)
+![equipment before](https://mziab.github.io/tod-reforged/img/equip1.png) ![equipment after](https://mziab.github.io/tod-reforged/img/equip2.png)
 
-![items before](https://mziab.grajpopolsku.pl/files/tod-reforged/items1.png) ![items after](https://mziab.grajpopolsku.pl/files/tod-reforged/items2.png)
+![items before](https://mziab.github.io/tod-reforged/img/items1.png) ![items after](https://mziab.github.io/tod-reforged/img/items2.png)
 
-![sprites before](https://mziab.grajpopolsku.pl/files/tod-reforged/bunny1.png) ![sprites after](https://mziab.grajpopolsku.pl/files/tod-reforged/bunny2.png)
+![sprites before](https://mziab.github.io/tod-reforged/img/bunny1.png) ![sprites after](https://mziab.github.io/tod-reforged/img/bunny2.png)
 
-![sprites before](https://mziab.grajpopolsku.pl/files/tod-reforged/cat1.png) ![sprites after](https://mziab.grajpopolsku.pl/files/tod-reforged/cat2.png)
+![sprites before](https://mziab.github.io/tod-reforged/img/cat1.png) ![sprites after](https://mziab.github.io/tod-reforged/img/cat2.png)
 
-For more screenshots click [here](https://mziab.grajpopolsku.pl/files/tod-reforged/index.html)
+For more screenshots click [here](https://mziab.github.io/tod-reforged/)
 
 DISCLAIMER
 ----------
