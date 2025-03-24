@@ -15,6 +15,10 @@ One inspiration behind this was a defunct project in the same vein by Cless of P
 
 ![artes before](https://mziab.grajpopolsku.pl/files/tod-reforged/sartes1.png) ![artes after](https://mziab.grajpopolsku.pl/files/tod-reforged/sartes2.png)
 
+![equipment before](https://mziab.grajpopolsku.pl/files/tod-reforged/equip1.png) ![equipment after](https://mziab.grajpopolsku.pl/files/tod-reforged/equip2.png)
+
+![items before](https://mziab.grajpopolsku.pl/files/tod-reforged/items1.png) ![items after](https://mziab.grajpopolsku.pl/files/tod-reforged/items2.png)
+
 ![sprites before](https://mziab.grajpopolsku.pl/files/tod-reforged/bunny1.png) ![sprites after](https://mziab.grajpopolsku.pl/files/tod-reforged/bunny2.png)
 
 ![sprites before](https://mziab.grajpopolsku.pl/files/tod-reforged/cat1.png) ![sprites after](https://mziab.grajpopolsku.pl/files/tod-reforged/cat2.png)
