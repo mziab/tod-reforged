@@ -19,7 +19,7 @@ One inspiration behind this was a defunct project in the same vein by Cless of P
 
 ![sprites before](https://mziab.grajpopolsku.pl/files/tod-reforged/cat1.png) ![sprites after](https://mziab.grajpopolsku.pl/files/tod-reforged/cat2.png)
 
-For more screenshots click [here](https://mziab.grajpopolsku.pl/files/tod-reforged/)
+For more screenshots click [here](https://mziab.grajpopolsku.pl/files/tod-reforged/index.html)
 
 DISCLAIMER
 ----------
