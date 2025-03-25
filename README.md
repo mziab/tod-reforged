@@ -79,8 +79,7 @@ This patch must be applied to the US release of Tales of Destiny (SLUS_006.26) i
 
 It is NOT meant for the PlayStation 2 game.
 
-Some images of the game contain a dummy audio track; this isn't used, but it
-complicates patching, as the dump might contain one or two .bin files.
+Some images of the game contain a dummy audio track; this isn't used, but it complicates patching, as the dump might contain one or two .bin files.
 To alleviate this, patches are provided for both:
 
 - tod_reforged_v090.xdelta (use if your image has ONE .bin file)
