@@ -99,7 +99,7 @@ CHANGES
 
 - Moved colon down in dialogue font.
 
-- Made a separate alternative names patch which reverts the localized character names to their Japanese counterparts (Woodrow, Johhny, Kongman, Greybum, Miktran, Ritora, Bacchus)
+- Made a separate alternative names patch which reverts the localized character names to their Japanese counterparts (Woodrow, Johnny, Kongman, Greybum, Miktran, Ritora, Bacchus)
 
 PATCHING INSTRUCTIONS
 ---------------------
