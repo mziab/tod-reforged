@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html translate="no">
+
+<head>
+	<title>Rom Patcher JS - Custom patcher template</title>
+	<meta http-equiv="content-Type" content="text/html; charset=UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+
+
+
+	<!-- Rom Patcher JS needed CSS/JS files -->
+	<link type="text/css" rel="stylesheet" href="./rom-patcher-js/style.css" media="all" />
+	<script type="text/javascript" src="./rom-patcher-js/RomPatcher.webapp.js"></script>
+
+	<!-- Rom Patcher JS initialization -->
+	<script type="text/javascript">
+        const TOD_MD5 = '1762cd70d7a52f0358975fff362bb300';
+        const TOD_TRACK01_MD5 = '21ca0eb29b32856d334a7cedbf5cc314';
+
+        const TOD_VERSION = '1.00';
+        const TOD_VERSION_NODOTS = TOD_VERSION.replace('.', '');
+
+        const queryString = window.location.search;
+        const urlParams = new URLSearchParams(queryString);
+
+        const patchPrefix = urlParams.has('alt') ? 'alt_' : '';
+        const titleSuffix = urlParams.has('alt') ? ' (Alternate Names)' : '';
+
+        const TOD_PATCH_NAME = `tod_reforged_${patchPrefix}v${TOD_VERSION_NODOTS}`;
+        const TOD_PATCH_NAME_TRACK01 = TOD_PATCH_NAME + '-track01';
+
+        const TOD_PATCH_TITLE = `Tales of Destiny Reforged${titleSuffix} v${TOD_VERSION}`;
+        const TOD_PATCH_TITLE_TRACK01 = TOD_PATCH_TITLE + ' (track01)';
+
+        const origin = window.location.origin;
+        const pathname = window.location.pathname;
+        const baseUrl = origin + pathname;
+
+        function ready(fn) {
+          if (document.readyState !== 'loading') {
+            fn();
+          } else {
+            document.addEventListener('DOMContentLoaded', fn);
+          }
+        }
+
+        const help_text = urlParams.has('alt') ? `<strong>Alternate version selected.</strong> <a href="${baseUrl}">Switch back to the main version</a>` : `<a href="${baseUrl}?alt">Click here for alternative names version</a>`;
+
+		window.addEventListener('load', function (evt) {
+			try {
+				RomPatcherWeb.initialize({
+					language: 'en', //default: en
+					requireValidation: false,
+                    allowDropFiles: true,
+                    onloadrom: function (romFile) {
+                        const hash = romFile.hashMD5();
+                        if (hash === TOD_MD5)
+                            RomPatcherWeb.pickEmbededFile(`${TOD_PATCH_NAME}.xdelta`);
+                        else if (hash === TOD_TRACK01_MD5)
+                            RomPatcherWeb.pickEmbededFile(`${TOD_PATCH_NAME_TRACK01}.xdelta`);
+                    },
+				}, {
+                    file: `./tod_reforged_${patchPrefix}v${TOD_VERSION_NODOTS}.zip`, //zip containing patches
+                    patches: [ //information about patches inside the zip
+                        {
+                            file: `${TOD_PATCH_NAME}.xdelta`, //required, must match the patch file name in the zip
+                            name: TOD_PATCH_TITLE,
+                            inputMd5: TOD_MD5,
+                        },
+                        {
+                            file: `${TOD_PATCH_NAME_TRACK01}.xdelta`, //required, must match the patch file name in the zip
+                            name: TOD_PATCH_TITLE_TRACK01,
+                            inputMd5: TOD_TRACK01_MD5,
+                        },
+                    ],
+				});
+			} catch (err) {
+				var message = err.message;
+				if (/incompatible browser/i.test(message) || /variable RomPatcherWeb/i.test(message))
+					message = 'Your browser is outdated and it is not compatible with this app.';
+
+				document.getElementById('rom-patcher-container').innerHTML = message;
+				document.getElementById('rom-patcher-container').style.color = 'red';
+			}
+		});
+
+        ready(function() {
+            document.querySelector('.rom-patcher-help').innerHTML = help_text;
+        });
+	</script>
+</head>
+
+<body style="font: 15px 'Open Sans', sans-serif; background-color: #31343a; color: #e4e4e6;">
+	<header style="text-align: center">
+		<h1>Rom Patcher JS</h1>
+
+        <div class="rom-patcher-help"></div>
+	</header>
+
+
+	<!-- Rom Patcher JS container -->
+	<!--
+		The following elements are required for Rom Patcher JS to work:
+			#rom-patcher-input-file-rom
+			#rom-patcher-select-patch
+			#rom-patcher-button-apply
+		The rest of elements are informative and can be removed, though it's recommended to keep them for a better user experience.
+	-->
+	<div id="rom-patcher-container">
+		<div class="rom-patcher-row margin-bottom" id="rom-patcher-row-file-rom">
+			<div class="text-right"><label for="rom-patcher-input-file-rom" data-localize="yes">ROM file:</label></div>
+			<div class="rom-patcher-container-input">
+				<input type="file" id="rom-patcher-input-file-rom" class="empty" disabled />
+			</div>
+		</div>
+        <div class="margin-bottom text-selectable text-mono text-muted" id="rom-patcher-rom-info" style="display: none;">
+			<div class="rom-patcher-row">
+				<div class="text-right">CRC32:</div>
+				<div class="text-truncate"><span id="rom-patcher-span-crc32"></span></div>
+			</div>
+			<div class="rom-patcher-row">
+				<div class="text-right">MD5:</div>
+				<div class="text-truncate"><span id="rom-patcher-span-md5"></span></div>
+			</div>
+			<div class="rom-patcher-row">
+				<div class="text-right">SHA-1:</div>
+				<div class="text-truncate"><span id="rom-patcher-span-sha1"></span></div>
+			</div>
+			<div class="rom-patcher-row" id="rom-patcher-row-info-rom">
+				<div class="text-right">ROM:</div>
+				<div class="text-truncate"><span id="rom-patcher-span-rom-info"></span></div>
+			</div>
+		</div>
+
+		<div class="rom-patcher-row margin-bottom" id="rom-patcher-row-file-patch">
+			<div class="text-right"><label for="rom-patcher-input-file-patch" data-localize="yes">Patch file:</label>
+			</div>
+			<div class="rom-patcher-container-input">
+				<select id="rom-patcher-select-patch"></select>
+			</div>
+		</div>
+		<div class="rom-patcher-row margin-bottom" id="rom-patcher-row-patch-description">
+			<div class="text-right text-mono text-muted" data-localize="yes">Description:</div>
+			<div class="text-truncate" id="rom-patcher-patch-description"></div>
+		</div>
+		<div class="rom-patcher-row margin-bottom text-selectable text-mono text-muted"
+			id="rom-patcher-row-patch-requirements">
+			<div class="text-right text-mono" id="rom-patcher-patch-requirements-type">ROM requirements:</div>
+			<div class="text-truncate" id="rom-patcher-patch-requirements-value"></div>
+		</div>
+
+		<div class="text-center" id="rom-patcher-row-apply">
+			<div id="rom-patcher-row-error-message" class="margin-bottom"><span id="rom-patcher-error-message"></span>
+			</div>
+			<button id="rom-patcher-button-apply" data-localize="yes" disabled>Apply patch</button>
+		</div>
+	</div>
+
+	<div id="rom-patcher-powered" class="text-center">
+		<a href="https://github.com/marcrobledo/RomPatcher.js" target="_blank"><img
+				src="rom-patcher-js/assets/powered_by_rom_patcher_js.png" loading="lazy" />Powered by Rom Patcher JS</a>
+	</div>
+</body>
+
+</html>
