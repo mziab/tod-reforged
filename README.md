@@ -121,8 +121,8 @@ To alleviate this, patches are provided for both:
     size: 557790912 bytes
     md5:  21ca0eb29b32856d334a7cedbf5cc314
 
-The patch can be applied using DeltaPatcher or the RHDN web-based patcher
-available at https://www.romhacking.net/patch/
+The patch can be applied using DeltaPatcher or the web-based patcher
+available at https://mziab.github.io/tod-reforged/patcher/
 
 SAVE COMPATIBILITY
 ------------------
