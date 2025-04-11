@@ -138,9 +138,9 @@ CHEATS
 
 Here are some useful cheat codes discovered during the development of the patch:
 
-disable dialogue window beep:
-80120c08 0000
+disable dialogue window beep: \
+80120c08 0000 \
 80120c0a 0000
 
-unlock debug mode:
+unlock debug mode: \
 80171da0 01
