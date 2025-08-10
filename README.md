@@ -1,5 +1,5 @@
-# TALES OF DESTINY REFORGED v1.00
-Released by mteam, Apr 8th 2025
+# TALES OF DESTINY REFORGED v1.01
+Released by mteam, Aug 10th 2025
 
 Improves the presentation of the NTSC-U release of Tales of Destiny by correcting all known translation flubs and technical bugs, as well as reverting all instances of censorship and most other arbitrary localization changes.
 
@@ -110,12 +110,12 @@ It is NOT meant for the PlayStation 2 game.
 Some images of the game contain a dummy audio track; this isn't used, but it complicates patching, as the dump might contain one or two .bin files.
 To alleviate this, patches are provided for both:
 
-- tod_reforged_v100.xdelta (use if your image has ONE .bin file)
+- tod_reforged_v101.xdelta (use if your image has ONE .bin file)
   for a .bin file matching the following specifications:
     size: 600580848 bytes
     md5:  1762cd70d7a52f0358975fff362bb300
 
-- tod_reforged_v100-track01.xdelta (use if your image has TWO .bin files)
+- tod_reforged_v101-track01.xdelta (use if your image has TWO .bin files)
   NOTE: apply this ONLY to track01
   for a .bin file matching the following specifications:
     size: 557790912 bytes
